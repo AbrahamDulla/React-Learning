@@ -1,13 +1,13 @@
 import "./App.css";
 import AppBar from "./Components/AppBar";
-import Greet from "./Components/greet";
-import Hello from "./Components/hello";
+import SetCount from "./Components/setCount";
+import Hello from "./Components/login";
 
 function App() {
   return (
     <div className="App">
       <AppBar />
-      <Greet />
+      <SetCount />
       <Hello />
     </div>
   );

@@ -1,7 +1,7 @@
-import "./greet.css";
+import "./setCount.css";
 import React, { useState } from "react";
 
-const Greet = () => {
+const SetCount = () => {
   const [count, setCount] = useState(0);
 
   const HandleIncrement = () => {
@@ -14,16 +14,16 @@ const Greet = () => {
 
   return (
     <div className="new">
-      <h1>Learn UseState</h1>
+      <h4 style={{ paddingTop: 15 }}>Set Count </h4>
       <div className="count">
         <p>Count: {count}</p>
-        <button style={{ marginRight: 10 }} onClick={HandleIncrement}>
+        <button onClick={HandleDecrement}>Decrement</button>
+        <button style={{ marginLeft: 10 }} onClick={HandleIncrement}>
           Increment
         </button>
-        <button onClick={HandleDecrement}>Decrement</button>
       </div>
     </div>
   );
 };
 
-export default Greet;
+export default SetCount;
