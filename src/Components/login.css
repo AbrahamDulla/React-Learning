@@ -6,3 +6,9 @@
   margin-left: 20px;
   border-radius: 10px;
 }
+
+.form-body {
+  display: grid;
+  justify-content: center;
+  padding-top: 35px;
+}
