@@ -1,7 +1,21 @@
 import "./setCount.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const SetCount = () => {
+  const [item, setItem] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`https://jsonplaceholder.typicode.com/posts/4`)
+      .then((response) => {
+        setItem(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  });
+
   const [count, setCount] = useState(0);
 
   const HandleIncrement = () => {

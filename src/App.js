@@ -7,8 +7,8 @@ function App() {
   return (
     <div className="App">
       <AppBar />
-      <SetCount />
       <Hello />
+      <SetCount />
     </div>
   );
 }
