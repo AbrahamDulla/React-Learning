@@ -8,7 +8,7 @@ import axios from "axios";
 const Login = () => {
   const [item, setItem] = useState([]);
 
-  const [name, setName] = useState("");
+  const [name, setName] = useState([""]);
   const [email, setEmail] = useState("");
   const [country, setCountry] = useState("");
   const [address, setAddress] = useState("");
@@ -20,7 +20,7 @@ const Login = () => {
     const user = { name, email, country, address, city };
 
     axios
-      .post(`https://jsonplaceholder.typicode.com/posts `, user)
+      .post(`https://jsonplaceholder.typicode.com/posts`, user)
       .then((response) => {
         console.log(response.data);
       })
@@ -89,12 +89,17 @@ const Login = () => {
             </div>
             <div className="each-rows">
               <label className="label">Country</label>
-              <input
-                style={{ width: 140, height: 20, marginLeft: -15 }}
-                type="text"
+              <select
+                style={{ width: 145, height: 30, marginLeft: -14 }}
                 value={country}
                 onChange={(event) => setCountry(event.target.value)}
-              />
+              >
+                <option value=""> Select Country </option>
+                <option value="Ethiopia">Ethiopia</option>
+                <option value="Eritrea">Eritrea</option>
+                <option value="Somalia">Somalia</option>
+              </select>
+              {/* {selectedColor && <p>You selected {selectedColor}.</p>} */}
             </div>
             <div className="each-rows">
               <label className="label">City</label>
